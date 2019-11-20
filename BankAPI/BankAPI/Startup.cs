@@ -28,6 +28,7 @@ namespace BankAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
             var connection = Configuration["ConexaoSqlite:SqliteConnectionString"];
             services.AddDbContext<ClientContext>(options =>
                 options.UseSqlite(connection)

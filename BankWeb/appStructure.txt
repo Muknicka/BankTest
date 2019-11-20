@@ -1,0 +1,18 @@
+
+● src
++---● app
+|   +--● client
+|   |  |--client.component.ts|.html|.css
+|   |  +--● client
+|   |  |  |--client.component.ts|.html|.css
+|   |  |
+|   |  +--● client-list
+|   |  |  |--client-list.component.ts|.html|.css
+|   |  |
+|   |  +--● shared
+|   |     |--client.service.ts
+|   |     |--client.model.ts
+|   |
+|   |--app.module.ts
+|
+|--index.html (cdn path for bootstrap & fa icons)
