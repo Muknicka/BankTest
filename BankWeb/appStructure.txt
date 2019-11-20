@@ -1,8 +1,8 @@
 
 ● src
 +---● app
-|   +--● client
-|   |  |--client.component.ts|.html|.css
+|   +--● clients
+|   |  |--clients.component.ts|.html|.css
 |   |  +--● client
 |   |  |  |--client.component.ts|.html|.css
 |   |  |
