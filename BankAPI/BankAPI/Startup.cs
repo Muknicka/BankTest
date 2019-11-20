@@ -33,6 +33,8 @@ namespace BankAPI
             services.AddDbContext<ClientContext>(options =>
                 options.UseSqlite(connection)
             );
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +44,10 @@ namespace BankAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(options =>
+                options.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader()
+            );
 
             app.UseHttpsRedirection();
 

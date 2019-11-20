@@ -30,7 +30,14 @@ export class ClientComponent implements OnInit {
 
   onSubimit(form:NgForm)
   {
-    
+    this.service.postClient(form.value).subscribe(
+      res =>{
+        this.resetForm(form);
+      },
+      err => {
+        console.log(err);
+      }
+    )
 
   }
 
