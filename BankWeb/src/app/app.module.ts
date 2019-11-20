@@ -9,6 +9,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { ClientsComponent } from './clients/clients.component';
 import { ClientComponent } from './clients/client/client.component';
+import { CountryComponent } from './clients/country/country.component';
 import { ClientListComponent } from './clients/client-list/client-list.component';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ClientListComponent } from './clients/client-list/client-list.component
     AppComponent,
     ClientsComponent,
     ClientComponent,
-    ClientListComponent
+    ClientListComponent,
+    CountryComponent
   ],
   imports: [
     BrowserModule,

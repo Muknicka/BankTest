@@ -33,6 +33,9 @@ namespace BankAPI
             services.AddDbContext<ClientContext>(options =>
                 options.UseSqlite(connection)
             );
+            services.AddDbContext<CountryContext>(options =>
+                options.UseSqlite(connection)
+            );
 
             services.AddCors();
         }

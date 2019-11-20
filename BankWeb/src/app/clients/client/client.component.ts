@@ -22,7 +22,7 @@ export class ClientComponent implements OnInit {
     if(form!=null)
       form.resetForm();
     this.service.formData = {
-      Id: 0,
+      ID: 0,
       Nome: '',
       Documento: '', 
       Endereco: '',
@@ -31,12 +31,12 @@ export class ClientComponent implements OnInit {
     }
   }
 
-  onSubimit(form:NgForm)
+  onSubmit(form:NgForm)
   {
     this.service.postClient(form.value).subscribe(
       res =>{
         this.resetForm(form);
-        this.toastr.success('Cadsatro enviado com sucesso', 'Castro de Clientes');
+        this.toastr.success('Cadastro enviado com sucesso', 'Cadastro de Clientes');
       },
       err => {
         console.log(err);

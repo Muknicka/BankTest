@@ -1,0 +1,6 @@
+<select name="Country" #Nome="ngModel" [(ngModel)]="service.formData.Country">
+    <option value="" disable>Escolha seu Pais</option>
+    <option *ngFor="let country of service.countryList" value={{country.pais}}>
+        {{country.pais}}
+    </option>
+</select>

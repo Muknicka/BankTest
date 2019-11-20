@@ -17,6 +17,6 @@ namespace BankAPI.Models
         public string Documento { get; set; }
         public string Endereco { get; set; }
         public string Complemento { get; set; }
-        public Country Country { get; set; }
+        public string Country { get; set; }
     }
 }

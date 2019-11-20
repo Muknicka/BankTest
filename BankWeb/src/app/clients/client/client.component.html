@@ -13,9 +13,7 @@
         <input name="Complemento" #Nome="ngModel" [(ngModel)]="service.formData.Complemento" class="form-control" placeholder="Complemento do Endereco">
     </div>
     <div class="form-group">
-        <option *ngFor="let pais of paises" value= {{pais.id}}>
-            {{pais.nome}}
-        </option>
+        <app-country></app-country>
     </div>
     <div class="form-group">
         <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid">Enviar</button>
