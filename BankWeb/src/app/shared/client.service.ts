@@ -5,12 +5,12 @@ import { HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class ClientService {
-  formData: Client
+  formData: Client;
   readonly path = 'http://localhost:59035/api';
   constructor(private http:HttpClient) { }
 
   postClient(formData:Client)
   {
-    return this.http.post(this.path + '/Client',formData)
+    return this.http.post(this.path + '/Client',this.formData)
   }
 }

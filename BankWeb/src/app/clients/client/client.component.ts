@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from 'src/app/shared/client.service';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-client',
@@ -9,7 +10,9 @@ import { NgForm } from '@angular/forms';
 })
 export class ClientComponent implements OnInit {
 
-  constructor(private service:ClientService) { }
+  constructor(private service:ClientService, private toastr: ToastrService) { 
+    
+  }
 
   ngOnInit() {
     this.resetForm();
@@ -19,7 +22,7 @@ export class ClientComponent implements OnInit {
     if(form!=null)
       form.resetForm();
     this.service.formData = {
-      ID: 0,
+      Id: 0,
       Nome: '',
       Documento: '', 
       Endereco: '',
@@ -33,6 +36,7 @@ export class ClientComponent implements OnInit {
     this.service.postClient(form.value).subscribe(
       res =>{
         this.resetForm(form);
+        this.toastr.success('Cadsatro enviado com sucesso', 'Castro de Clientes');
       },
       err => {
         console.log(err);
