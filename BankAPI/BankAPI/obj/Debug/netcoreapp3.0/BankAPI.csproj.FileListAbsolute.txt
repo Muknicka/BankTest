@@ -140,3 +140,4 @@ C:\Projetos\BankTest\BankAPI\BankAPI\obj\Debug\netcoreapp3.0\BankAPI.RazorTarget
 C:\Projetos\BankTest\BankAPI\BankAPI\obj\Debug\netcoreapp3.0\BankAPI.csproj.CopyComplete
 C:\Projetos\BankTest\BankAPI\BankAPI\obj\Debug\netcoreapp3.0\BankAPI.dll
 C:\Projetos\BankTest\BankAPI\BankAPI\obj\Debug\netcoreapp3.0\BankAPI.pdb
+C:\Projetos\BankTest\BankAPI\BankAPI\obj\Debug\netcoreapp3.0\BankAPI.csprojAssemblyReference.cache

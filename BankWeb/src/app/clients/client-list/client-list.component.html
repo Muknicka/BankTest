@@ -1,9 +1,13 @@
 <table class="table table-hover">
-    <tr *ngFor="let pd of service.list">
-        <td>{{pd.Nome}}</td>
-        <td>{{pd.Documento}}</td>
-        <td>{{pd.Endereco}}</td>
-        <td>{{pd.Complemento}}</td>
-        <td>{{pd.Country}}</td>
+    <tr *ngFor="let cli of service.list">
+        <td>{{cli.nome}}</td>
+        <td>{{cli.documento}}</td>
+        <td>{{cli.endereco}}</td>
+        <td>{{cli.complemento}}</td>
+        <td>{{cli.country}}</td>
+        <td><i class="fas fa-pen-square" (click)="bindForm(cli)"></i></td>
+        <td>
+            <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(cli.id)"></i>
+        </td>
     </tr>
 </table>

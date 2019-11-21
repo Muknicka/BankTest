@@ -13,9 +13,19 @@ export class ClientService {
 
   constructor(private http:HttpClient) { }
 
-  postClient(formData:Client)
+  postClient()
   {
     return this.http.post(this.path + '/Client',this.formData);
+  }
+
+  putClient()
+  {
+    return this.http.put(this.path + '/Client/'+this.formData.id,this.formData);
+  }
+
+  deleteClient(id)
+  {
+    return this.http.delete(this.path + '/Client/'+ id);
   }
 
   refreshList(){

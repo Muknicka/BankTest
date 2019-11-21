@@ -1,8 +1,8 @@
 export class Client {
-    ID: number;
-    Nome: string;
-    Documento: string; 
-    Endereco: string;
-    Complemento: string;
-    Country: string;
+    id: number;
+    nome: string;
+    documento: string; 
+    endereco: string;
+    complemento: string;
+    country: string;
 }

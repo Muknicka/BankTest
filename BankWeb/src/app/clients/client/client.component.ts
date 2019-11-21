@@ -22,27 +22,47 @@ export class ClientComponent implements OnInit {
     if(form!=null)
       form.resetForm();
     this.service.formData = {
-      ID: 0,
-      Nome: '',
-      Documento: '', 
-      Endereco: '',
-      Complemento: '',
-      Country: ''
+      id: 0,
+      nome: '',
+      documento: '', 
+      endereco: '',
+      complemento: '',
+      country: ''
     }
   }
 
   onSubmit(form:NgForm)
   {
-    this.service.postClient(form.value).subscribe(
+    if(this.service.formData.id==0)
+      this.insertRecord(form);
+    else
+      this.updateRecord(form);  
+  }
+
+  insertRecord(form: NgForm){
+    this.service.postClient().subscribe(
       res =>{
         this.resetForm(form);
         this.toastr.success('Cadastro enviado com sucesso', 'Cadastro de Clientes');
+        this.service.refreshList();
       },
       err => {
         console.log(err);
       }
     )
+  }
 
+  updateRecord(form: NgForm){
+    this.service.putClient().subscribe(
+      res =>{
+        this.resetForm(form);
+        this.toastr.info('Cadastro atualizado com sucesso', 'Cadastro de Clientes');
+        this.service.refreshList();
+      },
+      err => {
+        console.log(err);
+      }
+    )
   }
 
 }
